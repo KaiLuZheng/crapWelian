@@ -7,7 +7,6 @@ import re
 import urllib 
 import urllib.request
 
-
 from urllib import parse
 
 import requests
@@ -15,7 +14,6 @@ import json
 
 def mainReq(url, headers):
     pass 
-
 
 
 def exJs(json):
@@ -43,7 +41,7 @@ if __name__ == '__main__':
 
     longCode = re.findall(r'detail/(.*?)\?', referer)[0]
 
-# application json
+# application/json
     data = json.dumps({'uniqueKey': longCode, 'uid':0})
     data = bytes(data, 'utf8')
     req = urllib.request.Request(url='http://h5.welian.com/rest/cloudevent-server/signup/getdetailbykey', headers=headers_)#, data=data)
