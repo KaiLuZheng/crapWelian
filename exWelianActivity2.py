@@ -12,14 +12,6 @@ from urllib import parse
 import requests
 import json
 
-def mainReq(url, headers):
-    pass 
-
-
-def exJs(json):
-    pass
-
-
 if __name__ == '__main__':
     
     referer = sys.argv[1] 
@@ -37,7 +29,6 @@ if __name__ == '__main__':
                 'Referer':referer
 
     }
-
 
     longCode = re.findall(r'detail/(.*?)\?', referer)[0]
 
@@ -80,8 +71,5 @@ if __name__ == '__main__':
             else:
                 f.write('<p>'+i+'</p>')
         f.write(exjson['data']['detail'])
-
-
-
 
 
